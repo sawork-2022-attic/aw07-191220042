@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/pos-counter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pos-discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pos-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pos-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pos-products/src/main/java" charset="UTF-8" />
   </component>
 </project>

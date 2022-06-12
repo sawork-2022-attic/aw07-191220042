@@ -13,9 +13,10 @@
           <entry name="$PROJECT_DIR$/../../maverepository/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
         </processorPath>
         <module name="pos-carts" />
-        <module name="pos-gateway" />
         <module name="pos-discovery" />
         <module name="pos-counter" />
+        <module name="pos-gateway" />
+        <module name="pos-order" />
         <module name="pos-products" />
         <module name="pos-api" />
       </profile>
@@ -27,6 +28,7 @@
       <module name="pos-counter" target="1.8" />
       <module name="pos-discovery" target="1.8" />
       <module name="pos-gateway" target="1.8" />
+      <module name="pos-order" target="1.8" />
       <module name="pos-products" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,6 +39,7 @@
       <module name="pos-counter" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.defaultComponentModel=spring" />
       <module name="pos-discovery" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.defaultComponentModel=spring" />
       <module name="pos-gateway" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.defaultComponentModel=spring" />
+      <module name="pos-order" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.defaultComponentModel=spring" />
       <module name="pos-products" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.defaultComponentModel=spring" />
     </option>
   </component>
