@@ -1,8 +1,11 @@
 com\micropos\api\ProductsApi.class
+com\micropos\dto\OrderDto.class
 com\micropos\api\ApiUtil.class
-com\micropos\dto\CartItemDto.class
+com\micropos\api\OrdersApi.class
 com\micropos\api\CounterApi.class
 com\micropos\dto\ErrorDto.class
 com\micropos\dto\CartDto.class
+com\micropos\dto\ItemDto.class
 com\micropos\api\CartsApi.class
 com\micropos\dto\ProductDto.class
+com\micropos\dto\OrderDto$StatusEnum.class

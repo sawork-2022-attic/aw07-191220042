@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
 @Validated
 @Tag(name = "counter", description = "the counter API")
 public interface CounterApi {

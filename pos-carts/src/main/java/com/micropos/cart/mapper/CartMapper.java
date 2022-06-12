@@ -3,7 +3,7 @@ package com.micropos.cart.mapper;
 import com.micropos.cart.model.Cart;
 import com.micropos.cart.model.Item;
 import com.micropos.dto.CartDto;
-import com.micropos.dto.CartItemDto;
+import com.micropos.dto.ItemDto;
 import com.micropos.dto.ProductDto;
 import org.mapstruct.Mapper;
 
@@ -29,11 +29,11 @@ public interface CartMapper {
     }
 
 
-    default List<CartItemDto> toItemDtos(List<Item> items) {
+    default List<ItemDto> toItemDtos(List<Item> items) {
         if (items == null || items.isEmpty()) {
             return null;
         }
-        List<CartItemDto> list = new ArrayList<>(items.size());
+        List<ItemDto> list = new ArrayList<>(items.size());
         for (Item item : items) {
             list.add(toItemDto(item));
         }
@@ -41,26 +41,26 @@ public interface CartMapper {
         return list;
     }
 
-    default List<Item> toItems(List<CartItemDto> itemDtos, CartDto cartDto) {
+    default List<Item> toItems(List<ItemDto> itemDtos, CartDto cartDto) {
         if (itemDtos == null || itemDtos.isEmpty()) {
             return null;
         }
         List<Item> list = new ArrayList<>(itemDtos.size());
-        for (CartItemDto itemDto : itemDtos) {
+        for (ItemDto itemDto : itemDtos) {
             list.add(toItem(itemDto, cartDto));
         }
 
         return list;
     }
 
-    default CartItemDto toItemDto(Item item) {
+    default ItemDto toItemDto(Item item) {
 
-        return new CartItemDto().id(item.id())
+        return new ItemDto().id(item.id())
                 .amount(item.quantity())
                 .product(getProductDto(item));
     }
 
-    default Item toItem(CartItemDto itemDto, CartDto cartDto) {
+    default Item toItem(ItemDto itemDto, CartDto cartDto) {
         return new Item().id(itemDto.getId())
                 .cartId(cartDto.getId())
                 .productId(itemDto.getProduct().getId())

@@ -16,11 +16,11 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * CartItemDto
+ * ItemDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
-public class CartItemDto   {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
+public class ItemDto   {
 
   @JsonProperty("id")
   private Integer id;
@@ -31,7 +31,7 @@ public class CartItemDto   {
   @JsonProperty("product")
   private ProductDto product;
 
-  public CartItemDto id(Integer id) {
+  public ItemDto id(Integer id) {
     this.id = id;
     return this;
   }
@@ -50,7 +50,7 @@ public class CartItemDto   {
     this.id = id;
   }
 
-  public CartItemDto amount(Integer amount) {
+  public ItemDto amount(Integer amount) {
     this.amount = amount;
     return this;
   }
@@ -69,7 +69,7 @@ public class CartItemDto   {
     this.amount = amount;
   }
 
-  public CartItemDto product(ProductDto product) {
+  public ItemDto product(ProductDto product) {
     this.product = product;
     return this;
   }
@@ -96,10 +96,10 @@ public class CartItemDto   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CartItemDto cartItem = (CartItemDto) o;
-    return Objects.equals(this.id, cartItem.id) &&
-        Objects.equals(this.amount, cartItem.amount) &&
-        Objects.equals(this.product, cartItem.product);
+    ItemDto item = (ItemDto) o;
+    return Objects.equals(this.id, item.id) &&
+        Objects.equals(this.amount, item.amount) &&
+        Objects.equals(this.product, item.product);
   }
 
   @Override
@@ -110,7 +110,7 @@ public class CartItemDto   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CartItemDto {\n");
+    sb.append("class ItemDto {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    product: ").append(toIndentedString(product)).append("\n");

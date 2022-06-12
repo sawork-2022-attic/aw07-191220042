@@ -2,13 +2,13 @@ package com.micropos.order.mapper;
 
 
 import com.micropos.order.model.Item;
-import com.micropos.dto.CartItemDto;
+import com.micropos.dto.ItemDto;
 import org.mapstruct.Mapper;
 
 @Mapper
 public interface ItemMapper {
 
-    Item toItem(CartItemDto productDto);
+    Item toItem(ItemDto productDto);
 
-    CartItemDto toCartItemDto(Item item);
+    ItemDto toCartItemDto(Item item);
 }

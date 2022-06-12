@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * ErrorDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
 public class ErrorDto   {
 
   @JsonProperty("code")

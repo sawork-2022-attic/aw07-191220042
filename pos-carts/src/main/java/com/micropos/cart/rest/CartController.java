@@ -6,7 +6,7 @@ import com.micropos.cart.model.Cart;
 import com.micropos.cart.model.Item;
 import com.micropos.cart.service.CartService;
 import com.micropos.dto.CartDto;
-import com.micropos.dto.CartItemDto;
+import com.micropos.dto.ItemDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +32,7 @@ public class CartController implements CartsApi {
     }
 
     @Override
-    public ResponseEntity<CartDto> addItemToCart(Integer cartId, CartItemDto cartItemDto) {
+    public ResponseEntity<CartDto> addItemToCart(Integer cartId, ItemDto cartItemDto) {
 //        return CartsApi.super.addItemToCart(cartId, cartItemDto);
         Optional<Cart> optionalCart = cartService.getCart(cartId);
         if (optionalCart.isEmpty()) {
@@ -43,7 +43,7 @@ public class CartController implements CartsApi {
     }
 
     @Override
-    public ResponseEntity<CartDto> createCart(CartDto cartDto) {
+    public ResponseEntity<CartDto> createCart() {
 //        return CartsApi.super.createCart(cartDto);
         Cart cart = cartService.newCart();
         if (cart == null) {

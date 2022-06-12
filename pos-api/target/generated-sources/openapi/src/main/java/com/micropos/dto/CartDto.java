@@ -4,7 +4,7 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.micropos.dto.CartItemDto;
+import com.micropos.dto.ItemDto;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -21,7 +21,7 @@ import javax.annotation.Generated;
  * CartDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
 public class CartDto   {
 
   @JsonProperty("id")
@@ -29,7 +29,7 @@ public class CartDto   {
 
   @JsonProperty("items")
   @Valid
-  private List<CartItemDto> items = null;
+  private List<ItemDto> items = null;
 
   public CartDto id(Integer id) {
     this.id = id;
@@ -50,12 +50,12 @@ public class CartDto   {
     this.id = id;
   }
 
-  public CartDto items(List<CartItemDto> items) {
+  public CartDto items(List<ItemDto> items) {
     this.items = items;
     return this;
   }
 
-  public CartDto addItemsItem(CartItemDto itemsItem) {
+  public CartDto addItemsItem(ItemDto itemsItem) {
     if (this.items == null) {
       this.items = new ArrayList<>();
     }
@@ -69,11 +69,11 @@ public class CartDto   {
   */
   @Valid 
   @Schema(name = "items", required = false)
-  public List<CartItemDto> getItems() {
+  public List<ItemDto> getItems() {
     return items;
   }
 
-  public void setItems(List<CartItemDto> items) {
+  public void setItems(List<ItemDto> items) {
     this.items = items;
   }
 

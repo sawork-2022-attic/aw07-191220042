@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
 @Validated
 @Tag(name = "products", description = "the products API")
 public interface ProductsApi {
@@ -65,7 +65,7 @@ public interface ProductsApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"image\" : \"image\", \"price\" : 5.962133916683182, \"name\" : \"name\", \"id\" : \"id\" }";
+                    String exampleString = "{ \"image\" : \"image\", \"price\" : \"\", \"name\" : \"name\", \"id\" : \"id\" }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }
@@ -103,7 +103,7 @@ public interface ProductsApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"image\" : \"image\", \"price\" : 5.962133916683182, \"name\" : \"name\", \"id\" : \"id\" }";
+                    String exampleString = "{ \"image\" : \"image\", \"price\" : \"\", \"name\" : \"name\", \"id\" : \"id\" }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }

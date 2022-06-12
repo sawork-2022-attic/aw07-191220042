@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * ProductDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T18:43:42.202678900+08:00[Asia/Shanghai]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-12T20:59:06.398330600+08:00[Asia/Shanghai]")
 public class ProductDto   {
 
   @JsonProperty("id")
@@ -28,7 +28,7 @@ public class ProductDto   {
   private String name;
 
   @JsonProperty("price")
-  private Double price;
+  private Double price = null;
 
   @JsonProperty("image")
   private String image;
@@ -80,8 +80,8 @@ public class ProductDto   {
    * Get price
    * @return price
   */
-  @NotNull 
-  @Schema(name = "price", required = true)
+  
+  @Schema(name = "price", required = false)
   public Double getPrice() {
     return price;
   }

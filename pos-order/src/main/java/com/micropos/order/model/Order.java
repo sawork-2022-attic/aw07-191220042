@@ -4,6 +4,7 @@ package com.micropos.order.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import com.micropos.dto.OrderDto;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -26,4 +27,8 @@ public class Order implements Serializable {
     @Setter
     @Getter
     private List<Item> items = new ArrayList<>();
+
+    @Getter
+    @Setter
+    OrderDto.StatusEnum status;
 }
