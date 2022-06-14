@@ -8,10 +8,12 @@ import com.micropos.order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
 import com.micropos.dto.OrderDto;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     @Autowired

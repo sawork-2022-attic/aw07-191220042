@@ -1,6 +1,6 @@
 package com.micropos.order.mapper;
 
-import com.micropos.dto.CartItemDto;
+import com.micropos.dto.ItemDto;
 import com.micropos.order.model.Item;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class ItemMapperImpl implements ItemMapper {
 
     @Override
-    public Item toItem(CartItemDto productDto) {
+    public Item toItem(ItemDto productDto) {
         if ( productDto == null ) {
             return null;
         }
@@ -25,13 +25,13 @@ public class ItemMapperImpl implements ItemMapper {
     }
 
     @Override
-    public CartItemDto toCartItemDto(Item item) {
+    public ItemDto toCartItemDto(Item item) {
         if ( item == null ) {
             return null;
         }
 
-        CartItemDto cartItemDto = new CartItemDto();
+        ItemDto itemDto = new ItemDto();
 
-        return cartItemDto;
+        return itemDto;
     }
 }
