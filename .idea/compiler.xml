@@ -30,7 +30,7 @@
       <module name="pos-delivery" target="1.8" />
       <module name="pos-discovery" target="1.8" />
       <module name="pos-gateway" target="1.8" />
-      <module name="pos-order" target="1.8" />
+      <module name="pos-order" target="11" />
       <module name="pos-products" target="1.8" />
     </bytecodeTargetLevel>
   </component>

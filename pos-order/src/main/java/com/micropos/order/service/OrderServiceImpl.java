@@ -8,10 +8,12 @@ import com.micropos.order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
 import com.micropos.dto.OrderDto;
+import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -30,6 +32,8 @@ public class OrderServiceImpl implements OrderService {
         Order order = new Order();
         order = orderRepository.save(order);
         List<Item> items = new ArrayList<>();
+        if(cart.items().isEmpty())
+            System.out.println(1);
         for (com.micropos.cart.model.Item item : cart.items()) {
             Item item1 = new Item();
             item1.orderId(order.id())
@@ -50,11 +54,19 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> listOrders() {
-        return null;
+        return Streamable.of(orderRepository.findAll()).toList();
     }
 
     @Override
     public Order deliverById(Integer orderId) {
-        return null;
+
+        Optional<Order> orderOptional = orderRepository.findById(orderId);
+        if (orderOptional.isPresent()) {
+            Order order = orderOptional.get();
+            order.status(OrderDto.StatusEnum.DELIVERED);
+            return orderRepository.save(order);
+        } else {
+            return null;
+        }
     }
 }

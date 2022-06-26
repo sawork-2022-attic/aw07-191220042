@@ -99,6 +99,7 @@ public class CartServiceImpl implements CartService {
 //        if (cart.addItem(item))
 //            return cartRepository.save(cart);
 //        return null;
+        System.out.println(item.id());
         item = itemRepository.save(item);
         if (cart.addItem(item)) {
             return cartRepository.save(cart);
@@ -113,6 +114,6 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Optional<Cart> getCart(Integer cartId) {
-        return cartRepository.findById(cartId);
+        return Optional.of(cartRepository.findById(cartId).orElse(new Cart()));
     }
 }

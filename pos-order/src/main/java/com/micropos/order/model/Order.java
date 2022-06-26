@@ -17,13 +17,13 @@ import java.util.List;
 public class Order implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
     @Setter
     private Integer id;
 
     @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "items", joinColumns = @JoinColumn(name = "order_id"))
+    @JoinTable(name = "orderanditems", joinColumns = @JoinColumn(name = "orderitems_orders_id_fk"))
     @Setter
     @Getter
     private List<Item> items = new ArrayList<>();

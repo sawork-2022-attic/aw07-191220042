@@ -28,6 +28,7 @@ public class DeliveryApplication {
     @Bean
     public Consumer<Integer> orderIdConsumer() {
         return (orderId -> {
+            System.out.println(1);
             restTemplate.getForObject(deliverUrl(orderId), Order.class);
         });
     }

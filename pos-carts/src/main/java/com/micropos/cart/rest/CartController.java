@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
+//import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api")
@@ -34,10 +36,12 @@ public class CartController implements CartsApi {
     @Override
     public ResponseEntity<CartDto> addItemToCart(Integer cartId, ItemDto cartItemDto) {
 //        return CartsApi.super.addItemToCart(cartId, cartItemDto);
+        System.out.println(cartId);
         Optional<Cart> optionalCart = cartService.getCart(cartId);
         if (optionalCart.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+        System.out.println(cartItemDto);
         Cart cart = cartService.add(optionalCart.get(), cartMapper.toItem(cartItemDto, cartMapper.toCartDto(optionalCart.get())));
         return new ResponseEntity<>(cartMapper.toCartDto(cart), HttpStatus.OK);
     }
@@ -54,7 +58,12 @@ public class CartController implements CartsApi {
 
     @Override
     public ResponseEntity<List<CartDto>> listCarts() {
-        return CartsApi.super.listCarts();
+
+        List<Cart> carts = cartService.getAllCarts();
+        if (carts.isEmpty()) {
+            return  new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<List<CartDto>>((List<CartDto>) cartMapper.toCartDtos(carts), HttpStatus.OK);
     }
 
     @Override

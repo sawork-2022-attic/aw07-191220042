@@ -2,7 +2,7 @@ package com.micropos.order.mapper;
 
 import com.micropos.dto.ItemDto;
 import com.micropos.order.model.Item;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(

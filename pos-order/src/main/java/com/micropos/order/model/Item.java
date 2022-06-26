@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "items")
+@Table(name = "orderitems")
 @Data
 @Accessors(fluent = true, chain = true)
 public class Item implements Serializable {

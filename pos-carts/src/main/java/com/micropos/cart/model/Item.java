@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class Item implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     @Getter
     @Setter
     private Integer id;

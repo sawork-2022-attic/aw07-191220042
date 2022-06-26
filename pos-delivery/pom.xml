@@ -16,12 +16,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>${spring.cloud.version}</version>
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>servlet-api</artifactId>-->
-<!--                    <groupId>javax.servlet</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
+            <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.micropos</groupId>
