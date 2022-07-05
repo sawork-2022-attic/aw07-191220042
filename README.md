@@ -1,5 +1,6 @@
 # aw07
-
+![img.png](img.png)
+![img_1.png](img_1.png)
 Please extend your MicroPOS system by adding a delivery service shown as the following figure.
 
 ![](10-pos.svg)
